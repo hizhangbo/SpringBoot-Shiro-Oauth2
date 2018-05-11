@@ -1,0 +1,12 @@
+server:
+  port: 8081
+
+spring:
+  profiles:
+    active: dev
+  resources:
+    static-locations: classpath:/view,classpath:/static,classpath:/mapper
+
+mybatis:
+  mapper-locations: classpath:mapper/modules/**/*.xml
+  type-aliases-package: top.crazybanana.modules.*.repository
