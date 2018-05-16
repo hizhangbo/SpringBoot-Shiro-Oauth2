@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script src="/plugin/jquery/jquery-3.3.1.min.js"></script>
+    <script src="/plugin/vue/vue.min.js"></script>
+</head>
+<body>
+<div id="main">
+    <input type="file" name="myfile" id="myfile" accept=".xls,.xlsx" multiple="multiple">
+    <input type="button" value="上传" @click="upload">
+</div>
+
+<script src="/js/modules/account/fileupload.js"></script>
+</body>
+</html>

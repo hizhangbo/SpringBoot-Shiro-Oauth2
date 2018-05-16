@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="/plugin/vue/vue.js"></script>
+    <script src="/plugin/vue/vue-router.js"></script>
+</head>
+<body>
+<div id="master">
+    <h1>母版页</h1>
+    <p>
+        <!-- 使用 router-link 组件来导航. -->
+        <!-- 通过传入 `to` 属性指定链接. -->
+        <!-- <router-link> 默认会被渲染成一个 `<a>` 标签 -->
+        <router-link to="/">首页</router-link>
+        <router-link to="/about">关于我</router-link>
+    </p>
+    <!-- 路由出口 -->
+    <!-- 路由匹配到的组件将渲染在这里 -->
+    <router-view></router-view>
+</div>
+
+<script src="/js/master.js"></script>
+</body>
+</html>

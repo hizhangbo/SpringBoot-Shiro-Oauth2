@@ -27,6 +27,19 @@ var vm = new Vue({
                 error: function(){
                 }
             });
+        },
+        addAll: function(){
+            var self = this;
+            var users = JSON.stringify(self.users);
+            $.ajax({
+                url: "/user/addAll",
+                method: "POST",
+                data: users,
+                contentType: 'application/json; charset=UTF-8',
+                success: function(data){
+
+                }
+            });
         }
     }
 });

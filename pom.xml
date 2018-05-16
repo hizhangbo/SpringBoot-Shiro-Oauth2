@@ -34,16 +34,6 @@
             <artifactId>shiro-spring</artifactId>
             <version>${shiro.version}</version>
         </dependency>
-        <!--<dependency>-->
-            <!--<groupId>org.mybatis</groupId>-->
-            <!--<artifactId>mybatis</artifactId>-->
-            <!--<version>${mybatis.version}</version>-->
-        <!--</dependency>-->
-        <!--<dependency>-->
-            <!--<groupId>org.mybatis</groupId>-->
-            <!--<artifactId>mybatis-spring</artifactId>-->
-            <!--<version>${mybatis.spring.version}</version>-->
-        <!--</dependency>-->
         <dependency>
             <groupId>org.mybatis.spring.boot</groupId>
             <artifactId>mybatis-spring-boot-starter</artifactId>
@@ -53,6 +43,11 @@
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
             <version>${mysql.connection.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-devtools</artifactId>
+            <optional>true</optional>
         </dependency>
     </dependencies>
 
