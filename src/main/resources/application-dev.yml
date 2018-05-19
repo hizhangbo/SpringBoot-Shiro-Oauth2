@@ -4,3 +4,24 @@ spring:
     username: root
     password: 123456
     driver-class-name: com.mysql.jdbc.Driver
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: env,beans
+#        include: "*"
+      base-path: /
+  security:
+    enabled: false
+
+logging:
+#  pattern:
+#    console: %d{yyyy-MM-dd HH:mm:ss} - %msg%n
+#    file: %d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n
+  level:
+    root: INFO
+  path: ./logs/
+  file:
+    max-size: 10MB
+#  file: myspringboot.log

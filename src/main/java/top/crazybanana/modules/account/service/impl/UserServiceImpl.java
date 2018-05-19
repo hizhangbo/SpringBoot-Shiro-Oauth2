@@ -1,5 +1,7 @@
 package top.crazybanana.modules.account.service.impl;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import top.crazybanana.domain.common.P;
@@ -12,6 +14,8 @@ import java.util.List;
 
 @Service("userService")
 public class UserServiceImpl implements UserService {
+
+    protected static final Logger logger = LoggerFactory.getLogger(UserServiceImpl.class);
 
     @Autowired
     UserRepository userRepository;

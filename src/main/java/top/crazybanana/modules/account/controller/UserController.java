@@ -1,33 +1,36 @@
 package top.crazybanana.modules.account.controller;
 
-import com.fasterxml.jackson.annotation.ObjectIdGenerators;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 import top.crazybanana.domain.common.R;
 import top.crazybanana.domain.modules.account.User;
 import top.crazybanana.modules.account.service.UserService;
-import top.crazybanana.modules.account.service.impl.UserServiceImpl;
 import top.crazybanana.modules.base.controller.BaseController;
 
 import java.io.*;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
-import java.util.ArrayList;
 import java.util.List;
 
 @RestController
 @RequestMapping("/user")
 public class UserController extends BaseController {
 
+    protected static final Logger logger = LoggerFactory.getLogger(UserController.class);
+
     @Autowired
     UserService userService;
 
     @RequestMapping("/list")
     public R list(){
+
+        logger.info("获取用户列表");
+        //User currentUser = super.getCurrentUser();
         List<User> users = userService.getAll();
         return R.ok(users);
     }
