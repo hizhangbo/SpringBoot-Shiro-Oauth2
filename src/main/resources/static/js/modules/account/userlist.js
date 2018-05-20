@@ -2,10 +2,10 @@
 var vm = new Vue({
     el: ".container",
     data: {
-        users:[{id:1,name:'jobs',password:'123',email:'jobs@123.com',role:{name: "admin"}}]
+        users:[]
     },
     created: function(){
-        //this.getUserList();
+        this.getUserList();
     },
     mounted: function(){
         this.$nextTick(function(){

@@ -20,7 +20,8 @@ logging:
 #    console: %d{yyyy-MM-dd HH:mm:ss} - %msg%n
 #    file: %d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n
   level:
-    root: INFO
+#    top.crazybanana.modules.account.repository: DEBUG
+    root: DEBUG
   path: ./logs/
   file:
     max-size: 10MB
