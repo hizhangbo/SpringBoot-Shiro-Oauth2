@@ -9,8 +9,8 @@ management:
   endpoints:
     web:
       exposure:
-        include: env,beans
-#        include: "*"
+#        include: metrics,env,beans
+        include: "*"
       base-path: /
   security:
     enabled: false
@@ -21,7 +21,7 @@ logging:
 #    file: %d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n
   level:
 #    top.crazybanana.modules.account.repository: DEBUG
-    root: DEBUG
+    root: INFO
   path: ./logs/
   file:
     max-size: 10MB
